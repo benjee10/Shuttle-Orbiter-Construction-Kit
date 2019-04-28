@@ -10,6 +10,13 @@ Pre-release alpha test version - not for redistribution
 
 CHANGELOG
 
+0.0.3 - PRE-RELEASE ALPHA
+- Updated textures for landing gear parts. 
+- Adjusted aero balance. 
+- Adjusted payload bay textures. 
+- Added emissives for cockpit part.
+- Added ability to toggle cockpit EVA hatches on/off in flight. 
+
 0.0.2 - PRE-RELEASE ALPHA
 - Added landing gear parts.
 - Added engine nodes to aft fuselage. 
