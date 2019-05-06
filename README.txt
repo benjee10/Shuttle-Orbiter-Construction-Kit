@@ -1,5 +1,5 @@
 SHUTTLE ORBITER CONSTRUCTION KIT
-VERSION 0.0.4 ALPHA
+VERSION 0.0.5 ALPHA
 for KERBAL SPACE PROGRAM 1.6.1+
 
 WARNING - THIS MOD IS IN AN UNTESTED AND POTENTIALLY UNSTABLE STATE. 
@@ -9,6 +9,9 @@ Pre-release alpha test version - not for redistribution
 
 
 CHANGELOG
+
+0.0.5 - PRE-RELEASE ALPHA
+- Added switchable decals/flags to Delta Wing (pending further custom options).
 
 0.0.4 - PRE-RELEASE ALPHA
 - Adjusted aero balance.
