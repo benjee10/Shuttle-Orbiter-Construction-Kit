@@ -1,5 +1,5 @@
 SHUTTLE ORBITER CONSTRUCTION KIT
-VERSION 0.0.7 ALPHA
+VERSION 0.0.8 ALPHA
 for KERBAL SPACE PROGRAM 1.7.1+
 
 WARNING - THIS MOD IS IN AN UNTESTED AND POTENTIALLY UNSTABLE STATE. 
@@ -11,6 +11,10 @@ Pre-release alpha test version - not for redistribution
 
 
 CHANGELOG
+
+0.0.8 - PRE-RELEASE ALPHA
+- Bundled HabTechRobotics
+- Added Canadarm1 parts & grapple fixture 
 
 0.0.7 - PRE-RELEASE ALPHA
 - Added Ku-band antenna part
