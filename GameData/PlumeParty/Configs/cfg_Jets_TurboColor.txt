@@ -1,0 +1,129 @@
+// This sample config causes three of the Panther engine to exist and applies the "Turbo [Color]" series plumes to them
+
++PART[turboJet]
+{
+	@name = turboJet2
+	@title = J-404B "Panther" Afterburning Turbofan
+	@EFFECTS
+	{
+		@power_wet
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = stream
+				modelName = PlumeParty/Engines/Turbine/turboYellowWave
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.6 1.0
+				emission = 1.2 1.1
+				emission = 1.5 1.5
+				speed = 0.0 0.8
+				speed = 1.0 1.0
+				speed = 1.5 1.1
+				speed = 2.0 1.5
+				localPosition = 0, 0, -0.5
+			}
+			MODEL_MULTI_PARTICLE
+			{
+				name = shock
+				modelName = PlumeParty/Engines/Turbine/turboYellowShock
+				transformName = thrustTransform
+				emission = 0.4 0.0
+				emission = 1.0 1.0
+				emission = 1.2 1.1
+				emission = 1.5 1.5
+				speed = 0.0 0.8
+				speed = 1.0 1.0
+				speed = 1.5 1.1
+				speed = 2.0 1.5
+				localPosition = 0, 0, -0.5
+			}
+		}
+	}
+}
+
++PART[turboJet]
+{
+	@name = turboJet3
+	@title = J-404C "Panther" Afterburning Turbofan
+	@EFFECTS
+	{
+		@power_wet
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = stream
+				modelName = PlumeParty/Engines/Turbine/turboBlueWave
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.6 1.0
+				emission = 1.2 1.1
+				emission = 1.5 1.5
+				speed = 0.0 0.8
+				speed = 1.0 1.0
+				speed = 1.5 1.1
+				speed = 2.0 1.5
+				localPosition = 0, 0, -0.5
+			}
+			MODEL_MULTI_PARTICLE
+			{
+				name = shock
+				modelName = PlumeParty/Engines/Turbine/turboBlueShock
+				transformName = thrustTransform
+				emission = 0.4 0.0
+				emission = 1.0 1.0
+				emission = 1.2 1.1
+				emission = 1.5 1.5
+				speed = 0.0 0.8
+				speed = 1.0 1.0
+				speed = 1.5 1.1
+				speed = 2.0 1.5
+				localPosition = 0, 0, -0.5
+			}
+		}
+	}
+}
+
+@PART[turboJet]
+{
+	@title = J-404A "Panther" Afterburning Turbofan
+	@EFFECTS
+	{
+		@power_wet
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = stream
+				modelName = PlumeParty/Engines/Turbine/turboRedWave
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.6 1.0
+				emission = 1.2 1.1
+				emission = 1.5 1.5
+				speed = 0.0 0.8
+				speed = 1.0 1.0
+				speed = 1.5 1.1
+				speed = 2.0 1.5
+				localPosition = 0, 0, -0.5
+			}
+			MODEL_MULTI_PARTICLE
+			{
+				name = shock
+				modelName = PlumeParty/Engines/Turbine/turboRedShock
+				transformName = thrustTransform
+				emission = 0.4 0.0
+				emission = 1.0 1.0
+				emission = 1.2 1.1
+				emission = 1.5 1.5
+				speed = 0.0 0.8
+				speed = 1.0 1.0
+				speed = 1.5 1.1
+				speed = 2.0 1.5
+				localPosition = 0, 0, -0.5
+			}
+		}
+	}
+}

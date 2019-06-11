@@ -1,0 +1,124 @@
+// This sample config causes three of the stock Vector engine to exist, each with the following plumes attached.
+// There are two flavors to the Kerolox plumes. Simply replace the "1" suffix (for yellow) with "2" (for orange).
+
++PART[SSME]
+{
+	@name = SSME2
+	@title = S3 KS-25B "Vector / Hydrolox"
+	@EFFECTS
+	{
+		@running_closed
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = flare
+				modelName = PlumeParty/Engines/Tundra/hydroSLFlare
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.3 0.15
+				emission = 1.0 1.0
+				speed = 0.3 0.2
+				speed = 1.0 1.0
+				energy = 0.2 0.4
+				energy = 1.0 1.0
+				localScale = 1.5, 1.5, 1.5
+			}
+			MODEL_MULTI_PARTICLE
+			{
+				name = shock
+				modelName = PlumeParty/Engines/Tundra/hydroSLMach
+				transformName = thrustTransform
+				emission = 0.2 0.0 0 0
+				emission = 0.4 0.4 0 0
+				emission = 0.8 1.0 0 0
+				speed = 0.2 0.2
+				speed = 1.0 1.0
+				energy = 0.2 0.5
+				energy = 0.4 1.0
+				localScale = 1.5, 1.5, 1.5
+			}
+		}
+	}
+}
+
++PART[SSME]
+{
+	@name = SSME3
+	@title = S3 KS-25C "Vector / Methalox"
+	@EFFECTS
+	{
+		@running_closed
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = flare
+				modelName = PlumeParty/Engines/Tundra/raptorSLFlare
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.3 0.15
+				emission = 1.0 1.0
+				speed = 0.3 0.2
+				speed = 1.0 1.0
+				energy = 0.2 0.4
+				energy = 1.0 1.0
+				localScale = 1.5, 1.5, 1.5
+			}
+			MODEL_MULTI_PARTICLE
+			{
+				name = shock
+				modelName = PlumeParty/Engines/Tundra/raptorSLMach
+				transformName = thrustTransform
+				emission = 0.2 0.0 0 0
+				emission = 0.4 0.4 0 0
+				emission = 0.8 1.0 0 0
+				speed = 0.2 0.2
+				speed = 1.0 1.0
+				energy = 0.2 0.5
+				energy = 0.4 1.0
+				localScale = 1.5, 1.5, 1.5
+			}
+		}
+	}
+}
+
+@PART[SSME]
+{
+	@title = S3 KS-25A "Vector / Kerolox"
+	@EFFECTS
+	{
+		@running_closed
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = flare
+				modelName = PlumeParty/Engines/Tundra/keroSLFlare1
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.3 0.15
+				emission = 1.0 1.0
+				speed = 0.3 0.2
+				speed = 1.0 1.0
+				energy = 0.2 0.4
+				energy = 1.0 1.0
+				localScale = 1.5, 1.5, 1.5
+			}
+			MODEL_MULTI_PARTICLE
+			{
+				name = shock
+				modelName = PlumeParty/Engines/Tundra/keroSLMach1
+				transformName = thrustTransform
+				emission = 0.2 0.0 0 0
+				emission = 0.4 0.4 0 0
+				emission = 0.8 1.0 0 0
+				speed = 0.2 0.2
+				speed = 1.0 1.0
+				energy = 0.2 0.5
+				energy = 0.4 1.0
+				localScale = 1.5, 1.5, 1.5
+			}
+		}
+	}
+}

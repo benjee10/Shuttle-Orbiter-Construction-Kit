@@ -1,0 +1,78 @@
+// This sample config causes three of the stock Rhino engine to exist, each with the following plumes attached.
+// There are two flavors to the Kerolox plumes. Simply replace the "1" suffix (for yellow) with "2" (for orange).
+// Note that the vacuum plumes were designed for a 2.5m engine and may be larger than you need, rather than smaller.
+
++PART[Size3AdvancedEngine]
+{
+	@name = Size3AdvancedEngine2
+	@title = Kerbodyne KR-2LB "Rhino / Hydrolox" 
+	@EFFECTS
+	{
+		@running_closed
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = stream
+				modelName = PlumeParty/Engines/Tundra/hydroVac
+				transformName = fxPoint
+				emission = 0.0 0.0
+				emission = 0.5 1.0
+				speed = 0.2 0.4
+				speed = 1.0 1.0
+				localScale = 1.5, 1.5, 1.5
+				localPosition = 0, 0, -0.5
+			}
+		}
+	}
+}
+
++PART[Size3AdvancedEngine]
+{
+	@name = Size3AdvancedEngine3
+	@title = Kerbodyne KR-2LC "Rhino / Methalox" 
+	@EFFECTS
+	{
+		@running_closed
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = stream
+				modelName = PlumeParty/Engines/Tundra/raptorVac
+				transformName = fxPoint
+				emission = 0.0 0.0
+				emission = 0.5 1.0
+				speed = 0.2 0.4
+				speed = 1.0 1.0
+				localScale = 1.5, 1.5, 1.5
+				localPosition = 0, 0, -0.5
+			}
+		}
+	}
+}
+
+
+@PART[Size3AdvancedEngine]
+{
+	@title = Kerbodyne KR-2LA "Rhino / Kerolox" 
+	@EFFECTS
+	{
+		@running_closed
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = stream
+				modelName = PlumeParty/Engines/Tundra/keroVac
+				transformName = fxPoint
+				emission = 0.0 0.0
+				emission = 0.5 1.0
+				speed = 0.2 0.4
+				speed = 1.0 1.0
+				localScale = 1.5, 1.5, 1.5
+				localPosition = 0, 0, -0.5
+			}
+		}
+	}
+}

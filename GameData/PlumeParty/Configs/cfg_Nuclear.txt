@@ -1,0 +1,252 @@
+// "Magellan"
+@PART[SSME]
+{
+	// Configured for SSME
+	@EFFECTS
+	{
+		@running_closed
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = fume
+				modelName = PlumeParty/Engines/Nuclear/magellanFume
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.5 1.0
+				speed = 0.0 0.7
+				speed = 1.0 1.0
+				energy = 0.2 0.5
+				energy = 0.8 1.0
+				localScale = 1.5, 1.5, 1.5
+			}
+			MODEL_MULTI_PARTICLE
+			{
+				name = mach
+				modelName = PlumeParty/Engines/Nuclear/magellanMach
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.5 1.0
+				speed = 0.0 0.2
+				speed = 1.0 1.0
+				energy = 0.0 0.5
+				energy = 1.0 1.0
+				localScale = 1.5, 1.5, 1.5
+			}
+		}
+	}
+}
+
+// "Penumbra"
+@PART[SSME]
+{
+	// Configured for SSME
+	@EFFECTS
+	{
+		@running_closed
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = fume
+				modelName = PlumeParty/Engines/Nuclear/
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.5 1.0
+				speed = 0.0 0.7
+				speed = 1.0 1.0
+				energy = 0.2 0.5
+				energy = 0.8 1.0
+				localScale = 1.5, 1.5, 1.5
+			}
+			MODEL_MULTI_PARTICLE
+			{
+				name = mach
+				modelName = PlumeParty/Engines/Nuclear/
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.5 1.0
+				speed = 0.0 0.2
+				speed = 1.0 1.0
+				energy = 0.0 0.5
+				energy = 1.0 1.0
+				localScale = 1.5, 1.5, 1.5
+			}
+		}
+	}
+}
+
+// "Ritual"
+// For rocket engines. Replace the number in the file name for variants. Valid numbers are: 1, 2.
+@PART[SSME]
+{
+	// Configured for SSME
+	@EFFECTS
+	{
+		@running_closed
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = fume
+				modelName = PlumeParty/Engines/Nuclear/ritual1Fume
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.5 1.0
+				speed = 0.2 0.6
+				speed = 1.0 1.0
+				energy = 0.0 0.2
+				energy = 0.8 1.0
+				localScale = 1.5, 1.5, 1.5
+			}
+			MODEL_MULTI_PARTICLE
+			{
+				name = lamp
+				modelName = PlumeParty/Engines/Nuclear/ritual1Lamp
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.6 1.0
+				speed = 0.0 0.5
+				speed = 1.0 1.0
+				energy = 0.0 0.0
+				energy = 0.6 1.0
+				localScale = 1.5, 1.5, 1.5
+			}
+		}
+	}
+}
+
+// "Firefly"
+// This plume is for jet engines but may work well on rockets too.
+@PART[turboJet]
+{
+	// Configured for Panther
+	@EFFECTS
+	{
+		@power_wet
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = cone
+				modelName = PlumeParty/Engines/Nuclear/
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.5 1.0
+				emission = 1.2 1.0
+				emission = 2.0 1.5 
+				speed = 0.5 0.5
+				speed = 1.0 1.0
+				speed = 1.5 1.1
+				speed = 2.0 1.5
+				localPosition = 0, 0, -0.5
+			}
+			MODEL_MULTI_PARTICLE
+			{
+				name = dust
+				modelName = PlumeParty/Engines/Nuclear/
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.5 2.0
+				emission = 1.0 1.0
+				emission = 1.5 1.5
+				speed = 1.0 1.0
+				speed = 2.0 1.5
+				energy = 0.0 1.0
+				energy = 0.5 0.5
+				energy = 1.0 1.0
+				localPosition = 0, 0, -0.5
+			}
+		}
+	}
+}
+
+// "Diesel"
+// This plume is for jet engines but may work well on rockets too.
+@PART[turboJet]
+{
+	// Configured for Panther
+	@EFFECTS
+	{
+		@power_wet
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = streak
+				modelName = PlumeParty/Engines/Nuclear/dieselStreak
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.5 1.0
+				emission = 1.2 1.0
+				emission = 2.0 1.5 
+				speed = 0.5 0.5
+				speed = 1.0 1.0
+				speed = 1.5 1.1
+				speed = 2.0 1.5
+				localPosition = 0, 0, -0.5
+			}
+			MODEL_MULTI_PARTICLE
+			{
+				name = furnace
+				modelName = PlumeParty/Engines/Nuclear/dieselFurnace
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.5 2.0
+				emission = 1.0 1.0
+				emission = 1.5 1.5
+				speed = 1.0 1.0
+				speed = 2.0 1.5
+				energy = 0.0 1.0
+				energy = 0.5 0.5
+				energy = 1.0 1.0
+				localPosition = 0, 0, -0.5
+			}
+		}
+	}
+}
+
+// "Turbo Nuk"
+// For jet engines. Cousins of the "TurboColor" series for turbine engines.
+// Replace the number in the file names for variants. Valid numbers are: 1, 2.
+@PART[turboJet]
+{
+	// Configured for Panther
+	@EFFECTS
+	{
+		@power_wet
+		{
+			!MODEL_MULTI_PARTICLE {}
+			MODEL_MULTI_PARTICLE
+			{
+				name = stream
+				modelName = PlumeParty/Engines/Nuclear/turboNuk2Wave
+				transformName = thrustTransform
+				emission = 0.0 0.0
+				emission = 0.6 1.0
+				emission = 1.2 1.1
+				emission = 1.5 1.5
+				speed = 0.0 0.8
+				speed = 1.0 1.0
+				speed = 1.5 1.1
+				speed = 2.0 1.5
+				localPosition = 0, 0, -0.5
+			}
+			MODEL_MULTI_PARTICLE
+			{
+				name = shock
+				modelName = PlumeParty/Engines/Nuclear/turboNuk2Shock
+				transformName = thrustTransform
+				emission = 0.4 0.0
+				emission = 1.0 1.0
+				emission = 1.2 1.1
+				emission = 1.5 1.5
+				speed = 0.0 0.8
+				speed = 1.0 1.0
+				speed = 1.5 1.1
+				speed = 2.0 1.5
+				localPosition = 0, 0, -0.5
+			}
+		}
+	}
+}
