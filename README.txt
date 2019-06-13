@@ -1,5 +1,5 @@
 SHUTTLE ORBITER CONSTRUCTION KIT
-VERSION 0.0.9 ALPHA
+VERSION 0.0.10 ALPHA
 for KERBAL SPACE PROGRAM 1.7.1+
 
 WARNING - THIS MOD IS IN AN UNTESTED AND POTENTIALLY UNSTABLE STATE. 
@@ -9,6 +9,12 @@ Pre-release alpha test version - not for redistribution
 
 
 CHANGELOG
+
+0.0.10 - PRE-RELEASE ALPHA
+- Aero balance changes
+- Added part descriptions
+- Added USA-inspired flag
+- Fixed colliders on Payload Truss Mount
 
 0.0.9 - PRE-RELEASE ALPHA
 - Bundled B9PartSwitch & PlumeParty
