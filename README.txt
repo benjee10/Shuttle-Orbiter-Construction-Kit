@@ -10,6 +10,10 @@ Pre-release alpha test version - not for redistribution
 
 CHANGELOG
 
+0.0.11 - PRE-RELEASE ALPHA
+- Added Orbiter Docking System IVA
+- Added decoupler node to Aft Fuselage
+
 0.0.10 - PRE-RELEASE ALPHA
 - Aero balance changes
 - Added part descriptions
