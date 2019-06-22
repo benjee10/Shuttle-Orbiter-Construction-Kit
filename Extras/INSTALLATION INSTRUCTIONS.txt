@@ -1,0 +1,9 @@
+SHUTTLE ORBITER CONSTRUCTION KIT
+VERSION 0.0.12b ALPHA
+for KERBAL SPACE PROGRAM 1.7.1+
+
+EXTRAS INSTALLATION
+
+COLUMBIA WINGS
+
+This optional patch adds the black wing chines seen on the Space Shuttle Columbia as a texture switch option. To install, drag the ColumbiaWings folder into your GameData/Benjee10_shuttleOrbiter/ folder. 

@@ -1,5 +1,5 @@
 SHUTTLE ORBITER CONSTRUCTION KIT
-VERSION 0.0.12 ALPHA
+VERSION 0.0.12b ALPHA
 for KERBAL SPACE PROGRAM 1.7.1+
 
 WARNING - THIS MOD IS IN AN UNTESTED AND POTENTIALLY UNSTABLE STATE. 
@@ -9,6 +9,9 @@ Pre-release alpha test version - not for redistribution
 
 
 CHANGELOG
+
+0.0.12b - PRE-RELEASE ALPHA
+- Added alternate wing texture as optional patch
 
 0.0.12 - PRE-RELEASE ALPHA
 - Updated materials
