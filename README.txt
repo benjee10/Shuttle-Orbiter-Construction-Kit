@@ -10,6 +10,12 @@ Pre-release alpha test version - not for redistribution
 
 CHANGELOG
 
+0.0.13 - PRE-RELEASE ALPHA
+- Replaced  'Custom #' names with actual names
+- Added fuel cell to Mid Fuselage
+- Changed EC balance
+- Added IR-Next compatibility patch
+
 0.0.12b - PRE-RELEASE ALPHA
 - Added alternate wing texture as optional patch
 
