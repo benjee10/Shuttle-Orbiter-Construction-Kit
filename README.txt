@@ -1,5 +1,5 @@
 SHUTTLE ORBITER CONSTRUCTION KIT
-VERSION 0.0.12b ALPHA
+VERSION 0.1.0 BETA
 for KERBAL SPACE PROGRAM 1.7.1+
 
 WARNING - THIS MOD IS IN AN UNTESTED AND POTENTIALLY UNSTABLE STATE. 
@@ -9,6 +9,12 @@ Pre-release alpha test version - not for redistribution
 
 
 CHANGELOG
+
+0.1.0 - BETA VERSION
+- Tweaked flag placements and size
+- Added -15 degree control point for shuttle cockpit
+- Adjusted mass and aero balance
+- Included craft file for STS stack. Requires reDIRECT and Breaking Ground for robotics function. 
 
 0.0.13 - PRE-RELEASE ALPHA
 - Replaced  'Custom #' names with actual names
