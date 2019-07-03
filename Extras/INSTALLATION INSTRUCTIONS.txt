@@ -7,3 +7,7 @@ EXTRAS INSTALLATION
 COLUMBIA WINGS
 
 This optional patch adds the black wing chines seen on the Space Shuttle Columbia as a texture switch option. To install, drag the ColumbiaWings folder into your GameData/Benjee10_shuttleOrbiter/ folder. 
+
+CUSTOM SHUTTLE NAMES
+
+This folder contains the .PSD files used to generate the decals and names on the Shuttle Orbiter. You will need a program capable of editing PSD files to make use of this. Simply edit the text or image as desired, then save the file as .PNG and overwrite the appropriate file in GameData/Benjee10_shuttleOrbiter/Parts/

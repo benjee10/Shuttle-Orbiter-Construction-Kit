@@ -1,14 +1,18 @@
 SHUTTLE ORBITER CONSTRUCTION KIT
-VERSION 0.1.0 BETA
+VERSION 1.0.0
 for KERBAL SPACE PROGRAM 1.7.1+
 
-WARNING - THIS MOD IS IN AN UNTESTED AND POTENTIALLY UNSTABLE STATE. 
-THIS RELEASE IS INTENDED FOR BASIC TESTING ONLY. MANY FEATURES AND PARTS ARE MISSING, NON-FUNCTIONAL OR MAY BE SUBJECT TO DEPRECATION WITHOUT WARNING. 
+Thanks you for downloading the Shuttle Orbiter Construction Kit, a mod for KSP version 1.7.1+ by Benjee10.
+This mod provides a set of parts designed to emulate the NASA Space Shuttle Orbiter. It works best paired with reDIRECT launch vehicle parts in a 2.5X scale solar system, but can be used however you please! Please consult the user manual for a brief guide on how to build and fly the Space Shuttle. 
 
-Pre-release alpha test version - not for redistribution
-
+This mod has several dependencies, namely B9PartSwitch and PlumeParty, which are bundled under their existing licenses. 
 
 CHANGELOG
+
+1.0.0 - FULL RELEASE
+- Final polish for release
+- Added user manual
+- Added editable shuttle names to extras
 
 0.1.0 - BETA VERSION
 - Tweaked flag placements and size
