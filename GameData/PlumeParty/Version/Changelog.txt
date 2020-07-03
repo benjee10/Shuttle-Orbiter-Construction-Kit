@@ -1,9 +1,17 @@
+0.6 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+* Added support for Squad revamp engines from KSP 1.6 ~ 1.9.
+* Added support for KSP 1.8: Moar Boosters' new SRMs.
+* Added support for DLC: Making History.
+* Revised Rapier plumes.
+
+
 0.5 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
 * Deleted plumes:
   * Generic: Methalox, Hydrolox
   
-Added plumes:
+* Added plumes:
   * Generic: Dwarf Star, Eagle
   * Vapor: Transonic vapor cone, wingtip trail
   * Ion engine blue

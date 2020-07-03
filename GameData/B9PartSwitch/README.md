@@ -10,7 +10,7 @@ http://forum.kerbalspaceprogram.com/index.php?showtopic=140541
 
 ## Requirements
 
-* KSP version 1.7.1 (build 2539) is the only supported KSP version
+* KSP version 1.9.0 (build 2781) is the only supported KSP version
 * [ModuleManager](http://forum.kerbalspaceprogram.com/index.php?showtopic=50533) is required.
 
 ## Installation
@@ -29,7 +29,211 @@ This plugin is distributed under [LGPL v3.0](http://www.gnu.org/licenses/lgpl-3.
 
 ## Changelog
 
-# v2.8.0
+# v2.16.0
+
+* Fix description of attach node mover (`SUBTYPE` -> `NODE` -> `positionOffset`) for error messages
+* Allow node size to be modified
+  * `SUBTYPE` -> `NODE` -> `size`
+  * Takes an integer
+  * Will scale with TweakScale (and round to the nearest integer)
+* Allow more flexible name matching in many places
+  * If it starts and ends with `/`, treat it as a regular expression
+  * If it contains `*` or `?`, treat those as wildcards (anything or one character respectively)
+  * Otherwise treat it as a normal string
+    * If it starts with `\`, the next character is `/`, and it ends with `/`, eliminate the leading `\`
+  * Implemented in the following places:
+    * attach node modifier node name (`SUBTYPE` -> `NODE` -> `name`)
+    * transform toggle name (`SUBTYPE` -> `transform`)
+    * node toggler name (`SUBTYPE` -> `node`)
+    * material modifier transform names (`SUBTYPE` -> `MATERIAL` -> `transform`/`baseTransform`)
+    * texture modifier transform names (`SUBTYPE` -> `TEXTURE` -> `transform`/`baseTransform`)
+    * module modifier name (`SUBTYPE` -> `MODULE` -> `IDENTIFIER` -> `name`)
+    * transform modifier transform names (`SUBTYPE` -> `TRANSFORM` -> `name`)
+* Implement custom handling for `ModuleRCSFX`
+  * Disable unused effects when switching based on `runningEffectName`
+* Fix transforms not getting shown/hidden properly after another module updates the model
+* Allow `ModuleB9PartSwitch` to have its fields and events placed in a group:
+  * `uiGroupName` - unique identifier of the group
+  * `uiGroupDisplayName` - human readable name of the group to show in the UI
+* New module for assigning PAW groups on other modules: `ModuleB9AssignUiGroups`
+  * takes one or more `MODULE` nodes that each identify a module to have its UI group assigned
+    * each one must have an `IDENTIFIER` node to identify the module
+      * it must have a `name` which is the name of the module (wildcards and regex are allowed)
+      * it can have any other fields that uniquely identify the module
+      * This is the same as the `IDENTIFIER` in a module switcher
+  * `uiGroupName` - unique identifier of the group
+  * `uiGroupDisplayName` - human readable name of the group to show in the UI
+  * only applies to fields/events that don't already have a group
+  * Cannot apply to `ModuleB9PartSwitch`, `ModuleB9PartInfo`, `ModuleB9AssignUiGroups` (itself), or `ModuleSimpleAdjustableFairing`
+
+# v2.15.2
+
+* Fix `ModuleJettison` shrouds disappearing in flight (again)
+
+# v2.15.1
+
+* Preserve drag cube weights when recalculating drag cubes
+* Don't call drag cube update methods that will be called by the flight integrator anyway
+* Ensure drag cubes aren't recalculated in flight regardless of configuration (it breaks things)
+
+# v2.15.0
+
+* Recompile against KSP 1.9.1
+
+### v2.14.0
+
+* Fix non-unique aspects complaining when present on more than one module
+* Generic material modifiers
+  * * `MATERIAL` nodes on subtypes
+    * `transform` defines GameObjects on which to use renderers
+    * `baseTransform` defines GameObjects and children on which to use renderers
+    * `FLOAT` - modifies a float property
+      * `shaderProperty` - name of the shader property to modify
+      * `value` - float to set the value to
+    * `COLOR` - modifies a color property
+      * `shaderProperty` - name of the shader property to modify (default `_Color`)
+      * `color` - color to set the property to, can be specified in any of the regular formats (name, hex, RGB(A) list)
+    * `TEXTURE` modifies a texture property (same functionality as `TEXTURE` nodes directly on the subtype)
+      * `currentTexture` - name of current texture to match when building (not full path) (optional)
+      * `texture` - path to new texture to switch to
+      * `isNormalMap` - whether to access the texture as a normal map or not (default false)
+      * `shaderProperty` - shader property to modify the color on
+        * Default `_MainTex` if `isNormalMap = false`
+        * Default `_BumpMap` is `isNormalMap = true`
+* Listen for `OnPartModelChanged` event to reinitialize model
+* Send `ModuleDataChanged` to modules that have had their data changed
+  * Include two attributes in the event details, `requestNotifyFARToRevoxelize` and `requestRecalculateDragCubes`, which can be used to request FAR/drag cubes updates at the end of the cycle
+* Transform move/rotation/scale now affect drag cubes/FAR
+* Send/listen for `DragCubesWereRecalculated` and `FarWasNotifiedToRevoxelize` to make sure actions are only done once per cycle
+* Fix drag cube updates possibly not actually being used
+
+### v2.13.0
+
+* Support changing `ModuleDeployableSolarPanel` `chargeRate`
+* Get rid of some useless debug messages related to UI prefabs
+* Fix UI breaking on switchers with tech restrictions if subtypes are unlocked out of order
+* Fix texture switches breaking on inactive subtypes when a part is duplicated
+
+### v2.12.1
+
+* Recompile against KSP 1.8.1
+
+### v2.12.0
+
+* Recompile against KSP 1.8.0
+* Stop moving the switcher to the end of the part action window
+* Remove `bottomOfWindow` paramter
+
+# v2.11.1
+
+* Fix default subtype not activating on the icon
+
+# v2.11.0
+
+* Allow switching UI to not be moved to the end of the part action window
+  * ModuleB9PartSwitch now accepts `bottomOfWindow = false` which will leave it in place
+  * Modules without this new parameter are unaffected
+* Allow transforms to be scaled
+  * `TRANSFORM {}` nodes now accept a `scaleOffset` which multiplies the transform's local scale
+  * `scaleOffset` either accepts a single number for all 3 axes or 3 numbers for x, y, z which can be separated by spaces, tabs, or commas
+* Fix plume switching for ModuleEnginesFX
+  * Still doesn't support switching in flight
+* Fix Texture switches getting stuck on copied parts
+* Fix node offsets not respecting part rotation when attempting to move the part with the switch
+
+# v2.10.1
+
+* Add missing Russian localization keys
+* Fix surface attach node modifiers not actually doing anything
+* Fix surface attach node modifiers checking whether the part allows surface attach to it rather than to parent part
+
+# v2.10.0
+
+* Use funds symbol for cost in tooltips
+* Fix vessel size including disabled objects
+* add new `upgradeRequired` field to `SUBTYPE`s
+  * References the name of a `PARTUPGRADE` require do unlock the subtype
+  * At least one subtype on every switcher must have no tech restriction (i.e. unlocks with the part), otherwise it will complain and remove the restriction from the first subtype
+  * All subtypes are unlocked in sandbox regardless of whether upgrades are applied
+  * Warning if the upgrade doesn't exist
+  * If you attempt to load a craft with a locked subtype you get a warning that it was replaced with the highest priority unlocked subtype
+* Add `defaultSubtypePriority` to `SUBTYPE`s
+  * Number (float) that determines a subtype's priority as the "default" subtype (i.e. the one that is chosen when you freshly add the part).
+  * The subtype with the highest priority that is also unlocked will be chosen
+  * If two subtypes have the same priority and both are unlocked, it will choose the first
+  * The default value is zero.
+* Add basic implementation of module switching
+  * HIGHLY EXPERIMENTAL
+  * Subtypes now accept a `MODULE` node
+    * inside is an `IDENTIFIER` node which is used to identify the module
+    * it must have a `name` which is the same as the module
+      * it can have any other fields that are used to identify the module
+        * e.g. `engineID` on `ModuleEngines`
+      * Identifying the module by nodes is not currently supported
+    * It accepts a `DATA` node which provides new data to be loaded into the module
+    * It accepts a `moduleActive = false` value which causes the module to be disabled
+  * Not everything will work initially, custom handling will have to be added for some modules
+  * Some modules are blacklisted for loading new data and disabling.  This list is subject to change.
+    * `ModulePartVariants`
+    * `ModuleB9PartSwitch`
+    * `ModuleB9PartInfo`
+    * `ModuleB9DisableTransform`
+    * `FSfuelSwitch`
+    * `FSmeshSwitch`
+    * `FStextureSwitch`
+    * `FStextureSwitch2`
+    * `InterstellarFuelSwitch`
+    * `IntersteallarMeshSwitch`
+    * `InterstellarTextureSwitch`
+
+### v2.9.0
+
+* Implement new switching UI based on the stock variant switcher
+* Have subtype switching buttons show some info about the subtype being switched to in a tooltip
+  * By default shows resources (including parent), mass, cost, max temperature, max skin temperature, crash tolerance
+  * Also shows `descriptionSummary` and `descriptionDetail` from subtype, before and after auto-generated info respectively, if present
+* 4 new fieds on `SUBTYPE`
+  * `descriptionSummary` - any info here will be put in the subtype switching tooltip before the auto-generated info - make it brief
+  * `descriptionDetail` - any info here will be put in the subtype switching tooltip after the auto-generated info - go nuts
+  * `primaryColor` - color to use in the left part of the switching button
+    * if not specified, use the tank type's primaryColor
+    * if that's not specified, use white
+  * `secondaryColor` - color to use in the right part of the switching button
+    * if not specified, use the tank's secondaryColor
+    * if that's not specified, use the subtype's primaryColor
+    * if that's not specified, use the tank's primaryColor
+    * if that's not specified, use gray
+* 2 new fields on `B9_TANK_TYPE`
+  * `primaryColor` - color to use in the left part of the switching button i they subtype does not specify one.  If not specified, common resource combinations will be used.
+  * `secondaryColor` - color to use in the right part of the switching button i they subtype does not specify one.  If not specified, common resource combinations will be used.
+* add default colors for common resources
+  * `ResourceColorLiquidFuel`
+  * `ResourceColorLqdHydrogen`
+  * `ResourceColorLqdMethane`
+  * `ResourceColorOxidizer`
+  * `ResourceColorMonoPropellant`
+  * `ResourceColorXenonGas`
+  * `ResourceColorElectricChargePrimary`
+  * `ResourceColorElectricChareSecondary`
+  * `ResourceColorOre`
+* Automatically apply resource colors to common resource combinations in tanks (if colors are not specified by the tank or subtype):
+  * LiquidFuel
+  * LiquidFuel/Oxidizer
+  * LqdHydrogen
+  * LqdHydrogen/Oxidizer
+  * LqdMethane
+  * LqdMethane/Oxidizer
+  * Oxidizer
+  * MonoPropellant
+  * XenonGas
+  * Ore
+  * ElectricCharge
+
+### v2.8.1
+
+* Recompile against KSP 1.7.3
+
+### v2.8.0
 
 * Recompile against KSP 1.7.1
 * Fix part action window showing removed resources in KSP 1.7.1
