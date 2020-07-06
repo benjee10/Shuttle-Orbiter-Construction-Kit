@@ -1,5 +1,5 @@
 SHUTTLE ORBITER CONSTRUCTION KIT
-VERSION 1.1.4
+VERSION 1.1.5
 for KERBAL SPACE PROGRAM 1.8.1+
 
 Thanks you for downloading the Shuttle Orbiter Construction Kit, a mod for KSP version 1.8.1+ by Benjee10.
@@ -8,6 +8,10 @@ This mod provides a set of parts designed to emulate the NASA Space Shuttle Orbi
 This mod has several dependencies, namely B9PartSwitch and PlumeParty, which are bundled under their existing licenses. 
 
 CHANGELOG
+
+1.1.5 - DEV VERSION
+- Fixed crew capacity on Spacelab parts
+- Added ladders to Spacelab & crew tunnel parts
 
 1.1.4 - DEV VERSION
 - Added shorter Spacelab
