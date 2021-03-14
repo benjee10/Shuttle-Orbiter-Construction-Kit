@@ -1,1 +1,0 @@
-This folder is for plumes for Squad engines that have more than one nozzle (particularly, the 4-nozzle ones: the RAPIER and MH Kodiak).
