@@ -1,5 +1,5 @@
 SHUTTLE ORBITER CONSTRUCTION KIT
-VERSION 1.1.7
+VERSION 1.1.9
 for KERBAL SPACE PROGRAM 1.11.0+
 
 Thanks you for downloading the Shuttle Orbiter Construction Kit, a mod for KSP version 1.11.0+ by Benjee10.
@@ -8,6 +8,14 @@ This mod provides a set of parts designed to emulate the NASA Space Shuttle Orbi
 This mod has several dependencies, namely B9PartSwitch and Waterfall, which are bundled under their existing licenses. Candarm robotics parts are bundled in htRobotics and IVAs make use of HabTechProps.
 
 CHANGELOG
+
+1.2.0 - IN DEVELOPMENT
+- Adjusted RCS transforms to improve balance; reduced number of RCS modules per part to 1
+- Added SpaceHab parts by InvaderChaos
+- Bundled experimental Buran parts in extras (unfinished; use at your own risk)
+
+1.1.8 - RELEASE
+- Updated dependencies
 
 1.1.7 - RELEASE
 - Waterfall no longer mandatory. Without Waterfall RCS FX will default to the ugly stock particles. No idea why you would want this but it's there
