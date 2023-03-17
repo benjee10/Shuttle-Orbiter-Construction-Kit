@@ -1,6 +1,6 @@
 SHUTTLE ORBITER CONSTRUCTION KIT
-VERSION 0.0.12b ALPHA
-for KERBAL SPACE PROGRAM 1.7.1+
+VERSION 1.4.0
+for KERBAL SPACE PROGRAM 1.12.x
 
 EXTRAS INSTALLATION
 
@@ -11,3 +11,8 @@ This optional patch adds the black wing chines seen on the Space Shuttle Columbi
 CUSTOM SHUTTLE NAMES
 
 This folder contains the .PSD files used to generate the decals and names on the Shuttle Orbiter. You will need a program capable of editing PSD files to make use of this. Simply edit the text or image as desired, then save the file as .PNG and overwrite the appropriate file in GameData/Benjee10_shuttleOrbiter/Parts/
+
+BURAN WIP
+
+These parts are not complete and development has stopped on them. They can be installed by placing the contents of the Buran WIP folder into the GameData/Benjee10_shuttleOrbiter/Parts/ folder. 
+They are provided for those curious, or for 3rd party mods to make use of. 
